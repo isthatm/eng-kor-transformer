@@ -11,6 +11,8 @@ from collections import Counter
 
 from spacy.lang.en import English
 from konlpy.tag import Okt
+from torch.utils.data import Dataset
+import torch
 
 PARENT_DIR = ""
 DATA_DIR   = ""
@@ -92,6 +94,39 @@ class Vocab:
             items = [(token, freq) for token, freq in items if token not in self.SPECIALS]
         return items[:n]
     
+class TranslationDataset(Dataset):
+    def __init__(self, 
+                 df: pd.DataFrame, 
+                 src_vocab: Vocab, 
+                 target_vocab: Vocab, 
+                 src_lang: str = 'english', 
+                 target_lang: str = 'korean'):
+        """
+            Initialize the TranslationDataset.
+            Args:
+                df (pd.DataFrame): DataFrame containing the source and target sentences.
+                src_vocab (Vocab): Vocabulary for the source language.
+                target_vocab (Vocab): Vocabulary for the target language.
+                src_tokenizer: Tokenizing function for the source language.
+                target_lang (str): Tokenizing function for the target language.
+        """
+        self.df = df
+        
+        self.src_vocab        = src_vocab
+        self.src_lang         = src_lang
+        self.src_tokernize_fn = LANG_TOKENIZERS[src_lang]
+
+        self.target_vocab       = target_vocab
+        self.target_lang        = target_lang
+        self.target_tokenize_fn = LANG_TOKENIZERS[target_lang]
+
+    def __len__(self):
+        return len(self.df)
+    
+    def __getitem__(self, idx):
+        pass
+
+
 def kor_tokenize_fn(text: str) -> list:
     """
         Use Konlpy's Okt tokenizer for Korean text.
