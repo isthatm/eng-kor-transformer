@@ -1,0 +1,10 @@
+Tokenizer:
+  algorithm: unigram
+
+  kor:
+    coverage: 0.9995
+    vocab_size: 22000 
+    
+  eng:
+    coverage: 1.0000
+    vocab_size: 13000 
