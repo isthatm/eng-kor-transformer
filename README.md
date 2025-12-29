@@ -1,4 +1,4 @@
-# KOR-ENG_Transformer
+# eng-kor-transformer
 Inspired by Kpop (I'm a ONCE 🍭) and the emergence of ChatGPT, I decided to build a Transformer **from scratch** for **English-Korean machine translation**, 
 following [Attention is all you need](https://arxiv.org/pdf/1706.03762) paper.
 
