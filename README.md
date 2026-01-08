@@ -2,6 +2,7 @@
 Inspired by Kpop (I'm a ONCE 🍭) and the emergence of ChatGPT, I decided to build a Transformer **from scratch** for **English-Korean machine translation**, 
 following [Attention is all you need](https://arxiv.org/pdf/1706.03762) paper.
 
+See the live demo [here](https://le-minh.vercel.app/projects/transformer-interpreter).
 
 ### Dataset
 Ideally, a clean English–Korean parallel corpus can be obtained from [AI Hub](https://www.aihub.or.kr/). However, account creation is restricted to users within Korea. 
@@ -89,7 +90,6 @@ TRG: 내일 집에 갈 거예요.
 SRC: 저는 내일 집에 갑니다.
 TRG: Tomorrow, I am going to go home.
 ```
-
 ### References
 - [SamLynnEvans/Transformer](https://github.com/SamLynnEvans/Transformer)
 - [Huffon/pytorch-transformer-kor-eng](https://github.com/Huffon/pytorch-transformer-kor-eng)
