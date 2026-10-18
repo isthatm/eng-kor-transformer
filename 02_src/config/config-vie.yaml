@@ -1,0 +1,20 @@
+Tokenizer:
+  algorithm: unigram
+  output_dir: 01_data/sentencepiece
+  byte_fallback: true
+  hard_vocab_limit: false
+  input_sentence_size: 0
+  shuffle_input_sentence: true
+  pad_id: 3
+
+  vie:
+    input_file: 01_data/PhoMT_cleaned/train/train.vi
+    model_prefix: vietnamese_phomt
+    coverage: 1.0
+    vocab_size: 16000
+    
+  eng:
+    input_file: 01_data/PhoMT_cleaned/train/train.en
+    model_prefix: english_phomt
+    coverage: 1.0
+    vocab_size: 16000

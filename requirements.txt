@@ -1,0 +1,6 @@
+torch==2.7.1
+sentencepiece==0.2.0
+numpy==2.2.6
+pandas==2.3.0
+PyYAML==6.0.3
+tqdm==4.67.1
