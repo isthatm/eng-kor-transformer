@@ -94,3 +94,5 @@ TRG: Tomorrow, I am going to go home.
 - [SamLynnEvans/Transformer](https://github.com/SamLynnEvans/Transformer)
 - [Huffon/pytorch-transformer-kor-eng](https://github.com/Huffon/pytorch-transformer-kor-eng)
 - A great [playground](https://poloclub.github.io/transformer-explainer/) explaining how Transformer works.
+
+TODO: Update viet-eng relevant info
