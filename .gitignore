@@ -209,6 +209,7 @@ __marimo__/
 
 01_data/
 03_models/
+02_src/hf-nmt-space/models/
 
 *.model
 *.pth
